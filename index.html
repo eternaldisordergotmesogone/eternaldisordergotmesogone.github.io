@@ -3,48 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Словник</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="buttons">
-            <button id="Dictionary" type="button">Dictionary</button>
-            <button id="AllWord" type="button">All Word</button>
+    <h1>Фруктова Рулетка</h1>
+    <h3 id="userName">User</h3>
+    <div class="machine">
+      <div class="roulette">
+        <div class="slots">
+          <div class="slot" id="slot1">
+            <div><img src="img/icon/apple.svg" alt="apple"></div>
+            <div><img src="img/icon/banana.svg" alt="banana"></div>
+            <div><img src="img/icon/cherry.svg" alt="cherry"></div>
+          </div>
+          <div class="slot" id="slot2">
+            <div><img src="img/icon/grape.svg" alt="grape"></div>
+            <div><img src="img/icon/kavun.svg" alt="kavun"></div>
+            <div><img src="img/icon/lemon.svg" alt="lemon"></div>
+          </div>
+          <div class="slot" id="slot3">
+            <div><img src="img/icon/mango.svg" alt="mango"></div>
+            <div><img src="img/icon/orange.svg" alt="orange"></div>
+            <div><img src="img/icon/strawberry.svg" alt="strawberry"></div>
+          </div>
         </div>
-        <div class="Translate-pages active">
-            <div class="word">
-                <p id="word"></p>
-            </div>
-            <div class="result">
-                <img src="img/icons8-arrow-left-30.png" alt="arrow-left">
-                <p id="result"></p>
-                <img src="img/icons8-arrow-24.png" alt="arrow-right">
-            </div>
-            <div class="answer-div">
-                <input type="text" id="answer" placeholder="Enter answer">
-                <button id="translate">Translate</button>
-            </div>
-            <div class="correct_uncorrect">
-                <p id="correct">Correct: 0</p>
-                <p id="uncorrect">Uncorrect: 0</p>
-            </div>
-        </div>
-        <div class="dictionary-pages dis">
-            <div class="list-word">
-                <ul id="wordList">
-                </ul>
-            </div>
-        </div>
+      </div>
     </div>
-    <div class="modal-bg" id="levelModal">
-        <div class="modal">
-            <h2>Ваш рівень знань</h2>
-            <p id="levelText">...</p>
-            <button id="closeModal">OK</button>
+  
+    <div>
+      <div class="Btn-wrapper">
+        <button id="spinBtn">КРУТИТИ!</button>
+      </div>
+  
+      <div class="info">
+        <p>Баланс: <span id="balance">1000</span> монет</p>
+      
+        <div class="bet-control">
+          <label for="bet">Ставка:</label>
+          <input id="bet" type="number" value="10" min="1" step="1"> монет
+          <div class="wrapper-bet">
+            <button id="decreaseBet" type="button">−</button>
+            <button id="increaseBet" type="button">+</button>
+          </div>
         </div>
+      </div>
     </div>
+  
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
