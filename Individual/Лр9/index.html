@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Гра 21</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game">
+  <h2>Гра «21»</h2>
+  <p id="info"></p>
+  <p id="round">Раунд: 0 / 3</p>
+
+  <div id="cards">
+    <div class="player">
+      <h3 id="userName"></h3>
+      <div id="userCards" class="cards-container"></div>
+      <p id="userScore"></p>
+    </div>
+    <div class="player">
+      <h3>Комп’ютер</h3>
+      <div id="compCards" class="cards-container"></div>
+      <p id="compScore"></p>
+    </div>
+  </div>
+
+  <button id="playBtn">Кинути карти</button>
+  <button id="resetBtn">Очистити</button>
+  <button id="finishBtn">Завершити</button>
+  <h3 id="result"></h3>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
