@@ -56,7 +56,9 @@ $(document).ready(function () {
         $("#uncorrect").text(`Uncorrect: ${score.uncorrect}`);
 
         setTimeout(() => {
-            score.attemp++;
+            if(score.attemp < 10){
+                score.attemp++;
+            }
             $("#result").text("");
             $("#result").text(`${score.attemp}/10`).css("color", "white");
             index++;
@@ -89,8 +91,6 @@ $(document).ready(function () {
         $("#wordList").empty();
         words.forEach(w => $("#wordList").append(`<li>${w.word} — ${w.translate}</li>`));
     });
-
-    // Закриття модалки
     $("#closeModal").on("click", function(){
         $("#levelModal").removeClass("active");
     });

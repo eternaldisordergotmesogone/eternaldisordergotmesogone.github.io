@@ -96,7 +96,9 @@ $(document).ready(function () {
         $("#uncorrect").text(`Uncorrect: ${score.uncorrect}`);
 
         setTimeout(() => {
-            score.attemp++;
+            if(score.attemp < 10){
+                score.attemp++;
+            }
             $("#result").text(`${score.attemp}/10`).css("color", "white");
             index++;
 
